@@ -24,7 +24,7 @@ describe('angularjs homepage todo list', function() {
         element(by.cssContainingText('.dropdown-toggle', 'Learn')).click()
     })
 
-    it('should make a call', async function(){
+    it('should make sure the first users username is Bret', async function(){
         var params = {
             host: 'jsonplaceholder.typicode.com',
             port: 443,
@@ -36,8 +36,26 @@ describe('angularjs homepage todo list', function() {
             expect(body.username == 'Bret').toBe(true)
         });
     })
+    it('should make sure the second users email is USERNAME', async function(){
+        //set the params
 
-    it('do code challenge', function(){
+        //make the call
+
+
+
+    })
+
+    it('build and check the emails', function(){
+        
+
+
+        let ryanschultz = createEmail('ryanschultz', 'gmail')
+        let seanchristensen = createEmail('seanchristensen', 'verisk')
+        let joshnimis = createEmail('joshnimis', 'xactware', 'org')
+
+        expect(ryanschultz == 'ryanschultz@gmail.com').toBe(true)
+        expect(seanchristensen == 'seanchristensen@verisk.com').toBe(true)
+        expect(joshnimis == 'joshnimis@xactware.org').toBe(true)
 
     })
 
