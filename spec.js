@@ -25,7 +25,7 @@ describe('angularjs homepage todo list', function() {
     })
 
     it('should make sure the first users username is Bret', async function(){
-        var params = {
+        let params = {
             host: 'jsonplaceholder.typicode.com',
             port: 443,
             method: 'GET',
@@ -36,12 +36,34 @@ describe('angularjs homepage todo list', function() {
             expect(body.username == 'Bret').toBe(true)
         });
     })
-    it('should make sure the second users email is USERNAME', async function(){
+    it('should make sure the second users email is EMAIL', async function(){
         //set the params
 
         //make the call
 
+        //Check the email
 
+    })
+
+    it('should make the post', async function(){
+        let params = {
+            host: 'jsonplaceholder.typicode.com',
+            port: 443,
+            method: 'POST',
+            path: '/posts',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+        };
+        let data = JSON.stringify({
+            title: 'Vrsk',
+            body: 'Test',
+            userId: 1,
+          })
+        
+        await httpRequest(params, data).then(function(body) {
+            //Take the response and get the post we just created
+        });
 
     })
 
@@ -49,13 +71,13 @@ describe('angularjs homepage todo list', function() {
         
 
 
-        let ryanschultz = createEmail('ryanschultz', 'gmail')
-        let seanchristensen = createEmail('seanchristensen', 'verisk')
-        let joshnimis = createEmail('joshnimis', 'xactware', 'org')
+        // let ryanschultz = createEmail('ryanschultz', 'gmail')
+        // let seanchristensen = createEmail('seanchristensen', 'verisk')
+        // let joshnimis = createEmail('joshnimis', 'xactware', 'org')
 
-        expect(ryanschultz == 'ryanschultz@gmail.com').toBe(true)
-        expect(seanchristensen == 'seanchristensen@verisk.com').toBe(true)
-        expect(joshnimis == 'joshnimis@xactware.org').toBe(true)
+        // expect(ryanschultz == 'ryanschultz@gmail.com').toBe(true)
+        // expect(seanchristensen == 'seanchristensen@verisk.com').toBe(true)
+        // expect(joshnimis == 'joshnimis@xactware.org').toBe(true)
 
     })
 
