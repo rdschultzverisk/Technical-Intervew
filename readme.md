@@ -3,6 +3,9 @@
 Node.js is required to run this project.
 https://nodejs.org/en/
 
+Java is also needed.
+https://www.java.com/download/ie_manual.jsp
+
 Afterwards, webdriver-manager is required along with Protractor.
 
 ## In a terminal / powershell window.
