@@ -15,6 +15,10 @@ For Webdriver
 
 *webdriver-manager update*
 
+> Note: You may encounter an error saying you don't have permission to do this.  If you type "Get-ExecutionPolicy" and get "Restricted" back it's simple to fix.
+> Open a new powershell window and type "set-executionpolicy remotesigned" and hit enter.  If you type "Get-ExecutionPolicy" again and hit enter you should see the response
+> "RemoteSigned".  This allows you to run signed remote scripts from the internet.
+
 And then finally
 
 *webdriver-manager start.*
